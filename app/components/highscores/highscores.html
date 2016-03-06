@@ -1,0 +1,30 @@
+<div class="jumbotron">
+  <div class="vertical-center">
+    <div class="pull-right">
+      <a href="#/home" class="btn-game btn-game-short btn-glyphicon glyphicon glyphicon-home"></a>
+    </div>
+    <div>
+      <div class="title-game">Highscores</div>
+    </div>
+    <table class="table table-striped highscores">
+      <thead>
+        <tr>
+          <th>Ranking</th>
+          <th>Username</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="hs in vm.highscores | orderBy:'-score'">
+          <th scope="row">{{ $index + 1  }}</th>
+          <td>{{ hs.username }}</td>
+          <td>{{ hs.score }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="row bottom-box">
+      <div class="col-md-4 highscore-box"><a href="#/home" class="btn-game btn-game-highscore">PLAY AGAIN!</a></div>
+      <div class="col-md-8 col-xs-2"><img class="trophy" src="./assets/images/trophy.png" width="230px"></div>
+    </div>
+  </div>
+</div>

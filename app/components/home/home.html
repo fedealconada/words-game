@@ -1,0 +1,28 @@
+<div class="jumbotron jumbotron-home">
+  <div class="vertical-center">
+    <div class="pull-right">
+      <a href="#/instructions" class="btn-game btn-game-short">?</a>
+    </div>
+    <div ng-if="!vm.username">
+      <div class="title-game">Hi! Ready to play?</div>
+    </div>
+    <div ng-if="vm.username">
+      <div class="title-game">Welcome back, {{vm.username}}!</div>
+    </div>
+    <div class="loader" ng-if="vm.loader">
+      <img src="./assets/images/loader.gif">
+    </div>
+    <div ng-if="!vm.username && !vm.loader">
+      <div class="input-group input-group-lg input-group-game">
+        <span class="input-group-addon input-group-addon-game"><span class="glyphicon glyphicon-user glyphicon-user-game"></span></span>
+        <input type="text" class="form-control" placeholder="What is your name?" ng-model="vm.formData.username">
+      </div>
+    </div>
+    <div class="row">
+      <div class="container" ng-if="!vm.loader">
+        <a class="btn-game btn-game" ng-click="vm.start()">PLAY!</a>
+      </div>
+    </div>
+    <div><img src="./assets/images/happy.png" class="happy"></div>
+  </div>
+</div>

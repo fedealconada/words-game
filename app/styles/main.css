@@ -1,0 +1,297 @@
+@font-face {
+    font-family: Cooper;
+    src: url('./fonts/cooperBTbold.otf');
+}
+
+@font-face {
+    font-family: Cheltenham;
+    src: url('./fonts/cheltenham.ttf');
+}
+
+body {
+  padding: 0;
+  font-family: Cheltenham;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px;
+  margin-bottom: 10px;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+  background-color: #95d4c3;
+  color: #3d424b;
+}
+
+.jumbotron-home{
+  padding-bottom: 0px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+.input-group-game{
+  border: solid 1px #1fa5e6;
+  border-radius: 6px;
+  margin-bottom: 30px;
+}
+
+.input-group-game input{
+  font-size: 2em;
+  font-family: Cooper;
+}
+
+.input-group-addon-game{
+  background-color: #1fa5e6;
+}
+
+.glyphicon-user-game{
+  color: white;
+}
+
+.navbar-game li a{
+  color:#1fa5e6;
+}
+
+.title-game{
+  font-size: 3em;
+  font-family: Cooper;
+  margin-bottom:0.5em;
+}
+
+.title-game h2{
+  margin-top: 0em !important;
+}
+
+.word{
+  background: #fff;
+  font-size: 3em;
+  margin: 3px;
+  padding: 8px 16px;
+  border: 1px dashed #e7e7e7;
+  border-radius: 5px;
+  color: #ff6400;
+}
+
+.answer{
+  border-radius: 10% 35% 70% 70% / 95% 100% 70% 70%;
+  font-size: 2.3em;
+  height: 57px;
+  width: 80%;
+  margin: 0 auto;
+  font-family: Cooper;
+  text-align: center;
+}
+
+.answer::-webkit-input-placeholder {
+  color: #e7e7e7;
+}
+
+.answer:-moz-placeholder {
+  color: #e7e7e7;
+}
+
+.answer::-moz-placeholder {
+  color: #e7e7e7;
+}
+
+.answer:-ms-input-placeholder {
+  color: #e7e7e7;
+}
+
+.highscores{
+  border: solid #69a3d4 2px;
+  border-radius: 6px;
+  border-collapse: separate;
+  font-family: Cooper;
+}
+
+.highscores thead{
+  background-color: #69a3d4;
+  color: white;
+}
+
+.highscores th, td{
+  text-align: center;
+}
+
+.highscores tr:nth-child(2n){
+  background-color: #69a3d4 !important;
+}
+
+.btn-game{
+  font-family: Cooper;
+  display: block;
+  color: #FFF !important;
+  border-radius: 12px;
+  background: #efc13d;
+  font-size: 20px;
+  width: 190px;
+  height: 43px;
+  line-height: 43px;
+  text-align: center;
+  vertical-align: middle;
+  letter-spacing: 0.04em;
+  border: 0px;
+  box-shadow: 0 8px 0 rgba(0,0,0,.2), 0 -6px 0 #ffe273;
+  cursor: pointer;
+  text-align: center;
+  margin: 0 auto;
+  z-index: 10;
+}
+
+.btn-game:hover{
+  background:#efca61;
+  text-decoration: none;
+}
+
+.btn-game-short{
+  width: 45px;
+  border-radius: 30px;
+}
+
+.btn-glyphicon{
+  font-family: 'Glyphicons Halflings';
+}
+
+.progress-bar{
+  font-family: Cooper;
+}
+
+.score{
+  border-radius: 10% 35% 70% 70% / 95% 100% 70% 70%;
+  font-size: 2.3em;
+  height: 38px;
+  font-family: Cooper;
+  text-align: center;
+  background-color: #ff6400;
+  width: 100px;
+  color: white;
+}
+
+.score > h4{
+  top: 7px;
+  position: relative;
+}
+
+.word-box{
+  font-family: Cooper;
+  margin: 2em;
+}
+
+.bottom-box{
+  position: relative;
+}
+
+.highscore-box{
+  position: absolute;
+  bottom:0;
+  right:0;
+  z-index: 10;
+}
+
+.container p{
+  text-align: left;
+}
+
+.loader{
+  margin: 2em;
+}
+
+.trophy{
+  min-width: 7em;
+}
+
+.error{
+  font-family: Cooper;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+  .run{
+    position: relative;
+    left: 2em;
+    top: 2em;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .trophy{
+    position: relative;
+    right: 3em;
+    width: 12em;
+  }
+
+  .run{
+    position: relative;
+    width: 7em;
+    right: 7em;
+    top: 2em;
+  }
+
+  .word{
+    background: #fff;
+    font-size: 1.7em;
+    right: 0.5em;
+    position: relative;
+    margin: 2px;
+    padding: 2px 6px;
+    border: 1px dashed #e7e7e7;
+    border-radius: 5px;
+    color: #ff6400;
+  }
+}

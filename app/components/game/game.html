@@ -1,0 +1,39 @@
+<div class="jumbotron jumbotron-game">
+  <div class="vertical-center" ng-init="vm.initialize()">
+    <div class="title-game">
+      <div class="pull-left">
+        <h2>Hi, {{ vm.username }}!</h2>
+      </div>
+      <div class="pull-right">
+        <a ng-click="vm.timerOff('instructions')" class="btn-game btn-game-short">?</a>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="loader" ng-if="vm.loader">
+      <img src="./assets/images/loader.gif">
+    </div>
+    <div class="error alert alert-danger" ng-if="vm.errorMessage">
+      <p>{{vm.errorMessage}}</p>
+    </div>
+    <a href="/#/home" class="btn-game btn-game-highscore" ng-if="vm.errorMessage">Try again!</a>
+    <div ng-if="!vm.loader && !vm.errorMessage">
+    <div class="progress active">
+        <progressbar-timer max-time="vm.maxTime"></progressbar-timer>
+    </div>
+
+      <div class="score">
+        <h4>Score: <span><strong>{{ vm.score }}</strong></span></h4>
+      </div>
+      <div class="word-box">
+        <span class="word" ng-repeat="c in vm.mangledWord track by $index">{{ c }}</span>
+      </div>
+      <div class="row">
+        <input autofocus ng-model="vm.charsInput" ng-keyup="vm.onKeyUp($event)" type="text" class="form-control input-lg answer" placeholder="My answer is...">
+      </div>
+    </div>
+    <div class="row bottom-box">
+      <div class="col-md-4 highscore-box"><a ng-click="vm.timerOff('highscores')" class="btn-game btn-game-highscore">Highscores</a></div>
+      <div class="col-md-8"><img class="run" src="./assets/images/run.png" width="130px"></div>
+    </div>
+  </div>
+</div>
