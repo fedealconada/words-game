@@ -21,8 +21,11 @@
       var user = $state.params.user;
 
       function initialize() {
-
-        vm.username = user.username;
+        if (user){
+          vm.username = user.username;
+        }else{
+          $state.go('home');
+        }
 
         if (!user.ip){
           IPService.getIp().then(function(response) {
