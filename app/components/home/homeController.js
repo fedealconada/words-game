@@ -19,16 +19,17 @@
 
       //get user IP
       IPService.getIp().then(function(response) {
-
           var ip = response.data.ip;
 
           DataService.getData().then(function(response){
             vm.highscores = response.highscores;
             if (vm.highscores){
               user = _.find(vm.highscores, function(item) {
+                if (item)
                   return item.ip === ip;
               });
             }
+            console.log(user);
             if (user){
               vm.username = user.username;
             }
