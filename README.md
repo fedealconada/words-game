@@ -10,7 +10,7 @@ You can manually run the application with the following commands:
 
 ```sh
 git clone https://github.com/fedealconada/words-game.git
-cd floating-mesa-10801
+cd words-game
 npm install && bower install
 grunt serve
 ```
